@@ -17,3 +17,7 @@
 .message_guessCard {
   background: color #e9e9eb !important;
 }
+
+.message__container {
+  height: 15vh;
+}

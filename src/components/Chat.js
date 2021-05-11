@@ -22,7 +22,7 @@ function Chat() {
 
   useEffect(() => {
     db.collection("messages")
-      .limit(14)
+
       .orderBy("timestamp", "asc")
       .onSnapshot((snapshot) => {
         setMessages(
@@ -62,13 +62,13 @@ function Chat() {
             </Button>
           </FormControl>
         </form>
-
-        <FlipMove>
-          {messages.map(({ id, msg }) => {
-            return <Messages key={id} username={username} msg={msg} />;
-          })}
-        </FlipMove>
       </Container>
+
+      <FlipMove>
+        {messages.map(({ id, msg }) => {
+          return <Messages key={id} username={username} msg={msg} />;
+        })}
+      </FlipMove>
     </>
   );
 }
