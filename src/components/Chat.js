@@ -22,6 +22,7 @@ function Chat() {
 
   useEffect(() => {
     db.collection("messages")
+      .limit(8)
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         setMessages(
