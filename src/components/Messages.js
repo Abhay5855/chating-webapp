@@ -4,14 +4,16 @@ import "./Messages.css";
 const Messages = forwardRef(({ msg, username }, ref) => {
   const isUser = username === msg.username;
   return (
-    <div ref={ref} className={`msg ${isUser && "message_card"}`}>
-      <Card className={isUser ? "message_userCard" : "message_guessCard"}>
-        <CardContent>
-          <Typography color="white" variant="h5" component="h2">
-            {msg.msg}
-          </Typography>
-        </CardContent>
-      </Card>
+    <div className="message__container">
+      <div ref={ref} className={`msg ${isUser && "message_card"}`}>
+        <Card className={isUser ? "message_userCard" : "message_guessCard"}>
+          <CardContent>
+            <Typography color="white" variant="h5" component="h2">
+              {msg.msg}
+            </Typography>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 });

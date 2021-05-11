@@ -1,26 +1,24 @@
-.msg {
-
-  padding:10px;
-  margin: 10px;
-  width:fit-content;
+.message__container {
+  width: 400px;
+  overflow: hidden;
 }
 
+.msg {
+  padding: 10px;
+  margin: 10px;
+  width: fit-content;
+}
 
 .message_card {
-
-  margin-left:auto;
+  margin-left: auto;
   text-align: left !important;
-  color:#bfbfbf;
-
+  color: #bfbfbf;
 }
 
 .message_userCard {
-
   background-color: rgb(88, 88, 185) !important;
-
 }
 
-.message_guessCard{
- 
+.message_guessCard {
   background: color #e9e9eb !important;
 }
