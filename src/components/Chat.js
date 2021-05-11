@@ -22,8 +22,8 @@ function Chat() {
 
   useEffect(() => {
     db.collection("messages")
-      .limit(8)
-      .orderBy("timestamp", "desc")
+      .limit(14)
+      .orderBy("timestamp", "asc")
       .onSnapshot((snapshot) => {
         setMessages(
           snapshot.docs.map((doc) => ({ id: doc.id, msg: doc.data() }))
