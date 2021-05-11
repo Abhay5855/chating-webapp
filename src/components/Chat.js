@@ -17,7 +17,7 @@ function Chat() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    setUsername(prompt("Enter your name"));
+    setUsername(prompt("enter username"));
   }, []);
 
   useEffect(() => {
