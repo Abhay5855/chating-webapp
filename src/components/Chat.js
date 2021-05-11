@@ -43,29 +43,32 @@ function Chat() {
   };
 
   return (
-    <Container>
-      <form className="chat__app">
-        <FormControl>
-          <InputLabel>Enter a message...</InputLabel>
-          <Input value={input} onChange={(e) => setInput(e.target.value)} />
-          <Button
-            disabled={!input}
-            variant="contained"
-            color="primary"
-            type="submit"
-            onClick={sendMessage}
-          >
-            Send Text
-          </Button>
-        </FormControl>
-      </form>
+    <>
+      <h2>Welcome {username}</h2>
+      <Container>
+        <form className="chat__app">
+          <FormControl>
+            <InputLabel>Enter a message...</InputLabel>
+            <Input value={input} onChange={(e) => setInput(e.target.value)} />
+            <Button
+              disabled={!input}
+              variant="contained"
+              color="primary"
+              type="submit"
+              onClick={sendMessage}
+            >
+              Send Text
+            </Button>
+          </FormControl>
+        </form>
 
-      <FlipMove>
-        {messages.map(({ id, msg }) => {
-          return <Messages key={id} username={username} msg={msg} />;
-        })}
-      </FlipMove>
-    </Container>
+        <FlipMove>
+          {messages.map(({ id, msg }) => {
+            return <Messages key={id} username={username} msg={msg} />;
+          })}
+        </FlipMove>
+      </Container>
+    </>
   );
 }
 
